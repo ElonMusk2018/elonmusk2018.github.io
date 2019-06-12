@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+				<head> <!-- look into href for the flag -->
+				<title>Home</title>
+				<meta name="description" content="My-First-Website" />
+				<meta name="organization, time management, perserverence" />
+				</head>
+				
+<center
+</body>
+<body bgcolor="#####0070ff"
+	 {font-family: "Lato", sans-serif;}
+
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 50px;
+  text-align: center;
+}
+
+#Tri-Cities {background-color:red;}
+#Kennewick {background-color:green;}
+#Industrial-District {background-color:blue;}
+#Clearwater {background-color:orange;}
+</style>
+</head>
+<body>
+
+<p>My-First-Tabs:</p>
+
+<div id="Tri-Cities" class="tabcontent">
+  <h1>Tri-Cities</h1>
+  <p>A new home for myself and the homestead of Tri-Tech</p>
+  <img src="img/Tri-Cities.jpeg" alt="overlord" width="400px" height="180px" align="center"><br>
+</div>
+
+<div id="Kennewick" class="tabcontent">
+  <h1>Kennewick</h1>
+  <p>The southern piece of the Tri-Cities Triumvirate</p> 
+   <img src="img/Kennewick.jpeg" alt="overlord" width="400px" height="180px" align="center"><br>s
+</div>
+
+<div id="Industrial-District" class="tabcontent">
+  <h1>Industrial-District</h1>
+  <p>The working guts of Kennewick's economy.</p>
+   <img src="img/Industrial-District.jpg" alt="overlord" width="400px" height="180px" align="center"><br>
+</div>
+
+<div id="Clearwater" class="tabcontent">
+  <h1>Clearwater</h1>
+  <p>A major pathway for Tri-Tech and a majority of working citezens</p>
+    <img src="img/Clearwater.jpg" alt="overlord" width="400px" height="180px" align="center"><br>
+</div>
+
+<button class="tablink" onclick="openCity('Tri-Cities', this, 'red')" id="defaultOpen">Tri-Cities</button>
+<button class="tablink" onclick="openCity('Kennewick', this, 'green')">Kennewick</button>
+<button class="tablink" onclick="openCity('Industrial-District', this, 'blue')">Industrial-District</button>
+<button class="tablink" onclick="openCity('Clearwater', this, 'orange')">Clearwater</button>
+
+<script>
+function openCity(cityName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(cityName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+
+	
+				
+</body>
+</center>
+</html>
